@@ -1,0 +1,65 @@
+.zt_amount{
+    display: flex;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    background: #f5f5f5;
+    font-size: 12px;
+    border-top: 1px solid #ddd;
+}
+.zt_amount span{
+    flex: 1;
+    padding-left: 10px;
+    font-weight: bold;
+    color: #ff3300;
+}
+.zt_amount a{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    background: #ff3300;
+}
+
+.zt_cartBox{
+    position: relative;
+}
+.zt_cartBox img.mui-media-object{
+    line-height: 60px;
+    max-width: 60px;
+    height: 60px;
+}
+.zt_cartBox .proName{
+    color: #333;
+}
+.zt_cartBox .proPrice .now{
+    color: red;
+}
+.zt_cartBox .proPrice .old{
+    color: #999;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+.zt_cartBox .proPrice .num{
+    float: right;
+}
+.zt_cartBox input{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.pro_size{
+    line-height: 32px;
+}
+.pro_size span{
+    border: 1px solid #ddd;
+    font-size: 14px;
+    padding: 5px;
+}
+.pro_size span.now{
+    background: #fa0;
+}
+.pro_num span{
+    font-size: 14px;
+}

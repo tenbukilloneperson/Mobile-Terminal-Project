@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>智淘-商品详情</title>
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+<div class="zt_container">
+    <header class="zt_topBar">
+        <a href="javascript:history.back();"><span class="fa fa-chevron-left"></span></a>
+        <h3>商品详情</h3>
+        <a href="index.html" class="icon"><span class="fa fa-home"></span></a>
+    </header>
+    <section class="zt_wrapper">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--TODO render-->
+            </div>
+        </div>
+    </section>
+    <footer class="zt_option">
+        <a href="user/cart.html" class="link"><span class="fa fa-shopping-cart"></span></a>
+        <a href="JavaScript:;" class="btn_cart">加入购物车</a>
+        <a href="JavaScript:;" class="btn_pay">立即支付</a>
+    </footer>
+</div>
+<script type="text/template" id="detail">
+    <div class="mui-slider">
+        <div class="mui-slider-group mui-slider-loop">
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#"><img src="{{pic[pic.length-1].picAddr}}"></a>
+            </div>
+            {{each pic}}
+            <div class="mui-slider-item {{$index===0?'mui-active':''}}">
+                <a href="#"><img src="{{$value.picAddr}}" alt=""></a>
+            </div>
+            {{/each}}
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#"><img src="{{pic[0].picAddr}}"></a>
+            </div>
+        </div>
+        <div class="mui-slider-indicator">
+            {{each pic}}
+            <div class="mui-indicator {{$index===0?'mui-active':''}}"></div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="pro_name">
+        <p class="mui-ellipsis-2">{{proName}}</p>
+    </div>
+    <div class="pro_price">
+        价格：<span class="now">&yen;{{price}}</span> <span class="old">&yen;{{oldPrice}}</span>
+    </div>
+    <div class="pro_size">
+        尺码：
+        <%
+           var sizeArr = size.split('-');
+           var start = sizeArr[0],end = sizeArr[1];
+           for(var i = start;i<= end;i++){ %>
+        <span data-size="{{i}}">{{i}}</span>
+        <% } %>
+    </div>
+    <div class="pro_num">
+        数量：
+        <div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='{{num}}'>
+            <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+            <input class="mui-numbox-input" type="number" />
+            <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+        </div>
+        <span>剩余：{{num}} 件</span>
+    </div>
+</script>
+<script src="assets/mui/js/mui.min.js"></script>
+<script src="assets/zepto/zepto.min.js"></script>
+<script src="assets/artTemplate/template-web.js"></script>
+<script src="js/mobile.js"></script>
+<script src="js/product.js"></script>
+</body>
+</html>

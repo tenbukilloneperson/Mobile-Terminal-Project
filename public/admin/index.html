@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乐淘后台管理系统-首页</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<!--侧边栏-->
+<aside class="ad_aside">
+    <div class="brand"><a href="index.html">ITCAST</a></div>
+    <div class="user">
+        <img src="images/default.png" alt="">
+        <span>超级管理员</span>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> 用户管理</a></li>
+            <li>
+                <a href="javascript:;"><span class="glyphicon glyphicon-list"></span> 分类管理</a>
+                <div class="child" style="display: none">
+                    <a href="#">一级分类</a>
+                    <a href="categorySecond.html">二级分类</a>
+                </div>
+            </li>
+            <li><a href="#"><span class="glyphicon glyphicon-tags"></span> 商品管理</a></li>
+        </ul>
+    </div>
+</aside>
+<!--内容-->
+<section class="ad_section">
+    <nav class="ad_nav">
+        <a data-menu href="javascript:;"><span class="glyphicon glyphicon-align-justify"></span></a>
+        <a href="javascript:;" data-toggle="modal" ><span class="glyphicon glyphicon-log-out"></span></a>
+    </nav>
+    <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li><a href="index.html">管理系统</a></li>
+            <li class="active">首页</li>
+        </ol>
+        <div class="ad_content">
+            <div class="jumbotron">
+                <h1>欢迎来到智淘电商管理平台</h1>
+                <p>简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="assets/jquery/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+.flex{
+    display: flex;
+}
+.zt_cateLeft{
+    width: 90px;
+    height: 100%;
+}
+.zt_cateLeft ul{
+    width: 100%;
+}
+.zt_cateLeft ul li{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 12px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: #f3f4f5;
+}
+.zt_cateLeft ul li a{
+    display: block;
+    color: #333;
+}
+.zt_cateLeft ul li.now{
+    border-right: none;
+    background: #fff;
+}
+.zt_cateLeft ul li.now a{
+    color: red;
+}
+
+.zt_cateRight{
+    flex: 1;
+    height: 100%;
+}
+.zt_cateRight ul{
+    width: 100%;
+    padding: 10px;
+}
+.zt_cateRight ul li{
+    width: 33.33%;
+    float: left;
+}
+.zt_cateRight ul li.nd{
+    width: 100%;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+.zt_cateRight ul li a{
+    display: block;
+    width: 100%;
+}
+.zt_cateRight ul li a img{
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    display: block;
+}
+.zt_cateRight ul li a p{
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 0;
+}

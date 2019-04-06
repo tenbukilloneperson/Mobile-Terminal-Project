@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>智淘-分类</title>
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/category.css">
+</head>
+<body>
+<div class="zt_container">
+    <header class="zt_topBar">
+        <a href="javascript:history.back();"><span class="fa fa-chevron-left"></span></a>
+        <h3>商品分类</h3>
+        <a href="search.html"><span class="fa fa-search"></span></a>
+    </header>
+    <section class="zt_wrapper flex">
+        <aside class="zt_cateLeft">
+            <!-- TODO render-->
+        </aside>
+        <article class="zt_cateRight">
+            <!--TODO render -->
+        </article>
+    </section>
+    <footer class="zt_tabs">
+        <a href="index.html"><span class="fa fa-home"></span><p>首页</p></a>
+        <a href="category.html" class="now"><span class="fa fa-bars"></span><p>分类</p></a>
+        <a href="user/cart.html"><span class="fa fa-shopping-cart"></span><p>购物车</p></a>
+        <a href="user/index.html"><span class="fa fa-user"></span><p>个人中心</p></a>
+    </footer>
+</div>
+<script type="text/template" id="top">
+    <ul>
+        {{each rows item i}}
+        <li class="{{i===0?'now':''}}"><a href="javascript:;" data-id="{{item.id}}">{{item.categoryName}}</a></li>
+        {{/each}}
+    </ul>
+</script>
+<script type="text/template" id="second">
+    <ul>
+        {{if rows.length}}
+        <% for(var i = 0 ; i < rows.length; i++){ %>
+        <li><a href="#"><img src="<%=rows[i].brandLogo%>" onerror="this.src='images/none01.jpg'" alt=""><p><%=rows[i].brandName%></p></a></li>
+        <% } %>
+        {{else}}
+        <li class="nd">暂无品牌。</li>
+        {{/if}}
+    </ul>
+</script>
+<script src="assets/mui/js/mui.min.js"></script>
+<script src="assets/zepto/zepto.min.js"></script>
+<script src="assets/artTemplate/template-web.js"></script>
+<script src="js/mobile.js"></script>
+<script src="js/category.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/*导航栏*/
+.zt_nav{
+    width: 100%;
+    padding: 10px 10px 0 10px;
+}
+.zt_nav a{
+    float: left;
+    width: 33.33%;
+}
+.zt_nav a img{
+    display: block;
+    width: 100%;
+}

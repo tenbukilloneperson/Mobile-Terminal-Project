@@ -1,0 +1,64 @@
+.zt_option{
+    width: 100%;
+    height: 55px;
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+    display: flex;
+}
+.zt_option .link{
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    line-height: 54px;
+    color: #333;
+}
+.zt_option [class^="btn_"]{
+    flex: 1;
+    margin-right: 10px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+.zt_option .btn_cart{
+    background: #991020;
+}
+.zt_option .btn_pay{
+    background: #fa672d;
+}
+/*商品信息样式*/
+[class^="pro_"]{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.pro_name p{
+    margin-bottom: 0;
+    font-size: 20px;
+    color: #333;
+}
+.pro_price .now{
+    font-size: 24px;
+    color: red;
+}
+.pro_price .old{
+    font-size: 12px;
+    color: #666;
+    text-decoration: line-through;
+}
+.pro_size{
+    line-height: 32px;
+}
+.pro_size span{
+    border: 1px solid #ddd;
+    font-size: 14px;
+    padding: 5px;
+}
+.pro_size span.now{
+    background: #fa0;
+}
+.pro_num span{
+    font-size: 14px;
+}

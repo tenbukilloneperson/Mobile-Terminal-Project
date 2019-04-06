@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>智淘-商品列表</title>
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/productList.css">
+</head>
+<body>
+<div class="zt_container">
+    <header class="zt_topBar">
+        <a href="javascript:history.back();"><span class="fa fa-chevron-left"></span></a>
+        <h3 class="nr">商品列表</h3>
+    </header>
+    <section class="zt_wrapper">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--搜索框-->
+                <div class="zt_search">
+                    <input type="search" placeholder="根据商品关键字进行搜索">
+                    <a href="javascript:;">搜索</a>
+                </div>
+                <!--排序区域-->
+                <div class="zt_order">
+                    <a href="javascript:;" data-type="time">上架时间 <span class="fa fa-angle-down"></span></a>
+                    <a href="javascript:;" data-type="price">价格 <span class="fa fa-angle-down"></span></a>
+                    <a href="javascript:;" data-type="num">销量 <span class="fa fa-angle-down"></span></a>
+                    <a href="javascript:;" data-type="sale">折扣 <span class="fa fa-angle-down"></span></a>
+                </div>
+                <!--产品区域-->
+                <div class="zt_product">
+                    <!--TODO render-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="zt_tabs">
+        <a href="index.html"><span class="fa fa-home"></span><p>首页</p></a>
+        <a href="category.html"><span class="fa fa-bars"></span><p>分类</p></a>
+        <a href="user/cart.html"><span class="fa fa-shopping-cart"></span><p>购物车</p></a>
+        <a href="user/index.html"><span class="fa fa-user"></span><p>个人中心</p></a>
+    </footer>
+</div>
+<script type="text/template" id="list">
+    <ul class="mui-clearfix">
+        {{each data item i}}
+        <li>
+            <a href="product.html?productId={{item.id}}" class="zt_proBox">
+                <img src="{{item.pic[0].picAddr}}" alt="">
+                <p class="name mui-ellipsis-2">{{item.proName}}</p>
+                <p class="price">
+                    <span class="now">&yen;{{item.price}}</span>
+                    <span class="old">&yen;{{item.oldPrice}}</span>
+                </p>
+                <button>立即购买</button>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<script src="assets/mui/js/mui.min.js"></script>
+<script src="assets/zepto/zepto.min.js"></script>
+<script src="assets/artTemplate/template-web.js"></script>
+<script src="js/mobile.js"></script>
+<script src="js/productList.js"></script>
+</body>
+</html>

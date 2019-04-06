@@ -1,0 +1,31 @@
+.zt_history{
+    font-size: 12px;
+    padding: 0 10px;
+}
+.zt_history .tit{}
+.zt_history .tit span{
+    color: #666;
+}
+.zt_history .tit a{
+    float: right;
+    color: #666;
+}
+.zt_history ul{
+    border: 1px dashed #ccc;
+    border-bottom: none;
+}
+.zt_history ul li{
+    border-bottom: 1px dashed #ccc;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+}
+.zt_history ul li a{
+    padding-left: 10px;
+}
+.zt_history ul li span{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    color: #666;
+}

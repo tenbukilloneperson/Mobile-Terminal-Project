@@ -1,0 +1,157 @@
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/*全屏容器*/
+.zt_container{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+/*顶部通栏*/
+.zt_topBar{
+    width: 100%;
+    height: 45px;
+    background: #069;
+    color: #fff;
+    line-height: 45px;
+    display: flex;
+}
+.zt_topBar a{
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    color: #fff;
+}
+.zt_topBar h3{
+    font-weight: normal;
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    line-height: 45px;
+    margin: 0;
+}
+.zt_topBar h3.nr{
+    padding-right: 45px;
+}
+/*内容区域*/
+.zt_wrapper{
+    width: 100%;
+    flex: 1;
+    background: #fff;
+    overflow: hidden;
+    position: relative;/*防止子容器定位后跑出wrapper的容器范围*/
+}
+/*底部tab*/
+.zt_tabs{
+    width: 100%;
+    height: 55px;
+    background: #069;
+    color: #fff;
+    display: flex;
+}
+.zt_tabs a{
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    padding-top: 7px;
+}
+.zt_tabs a.now{
+    color: #fa0;
+}
+.zt_tabs a p{
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.zt_tabs a.now p{
+    color: #fa0;
+}
+
+/*产品区域*/
+.zt_product{
+    padding: 0 10px;
+}
+.zt_product ul{
+    width: 100%;
+}
+.zt_product ul li{
+    width: 50%;
+    float: left;
+    margin-top: 10px;
+}
+.zt_product ul li:nth-child(2n+1){
+    padding-right: 5px;
+}
+.zt_product ul li:nth-child(2n){
+    padding-left: 5px;
+}
+
+/*产品信息容器*/
+.zt_proBox{
+    display: block;
+    width: 100%;
+    box-shadow: 0 0 1px #ccc;
+    padding-bottom: 10px;
+}
+.zt_proBox img{
+    width: 100%;
+    display: block;
+}
+.zt_proBox .name{
+    color: #333;
+    padding: 0 5px;
+}
+.zt_proBox .price{
+    text-align: center;
+    font-size: 12px;
+}
+.zt_proBox .price .now{
+    color: red;
+}
+.zt_proBox .price .old{
+    color: #666;
+    text-decoration: line-through;
+}
+.zt_proBox button{
+    display: block;
+    margin: 0 auto;
+    background: #069;
+    color: #fff;
+    border-color: #069;
+}
+/*搜索框*/
+.zt_search{
+    padding: 10px;
+    position: relative;
+}
+.zt_search input{
+    background: #fff;
+    border: 1px solid #069;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    border-radius: 2px;
+}
+.zt_search a{
+    width: 60px;
+    height: 30px;
+    background: #069;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 0 2px 2px 0;
+}
